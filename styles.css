@@ -1,0 +1,426 @@
+/* ==========================================================================
+   CSS MODERN VARIABLES & TECH DARK COLOR SCHEME
+   ========================================================================== */
+:root {
+    --bg-dark-void: #0d1117;          /* Sleek GitHub Deep Black */
+    --bg-surface-card: #161b22;       /* Slate Black for Card panels */
+    --accent-glow-neon: #00ffd1;      /* Electric Cyan Highlight */
+    --accent-gold-soft: #f4b400;      /* Academic Gold Highlights */
+    --text-primary-pure: #f0f6fc;     /* Ghost White text for contrast */
+    --text-muted-gray: #8b949e;       /* Low emphasis reading text */
+    --font-stack: 'Segoe UI', Inter, system-ui, sans-serif;
+    --transition-fast: 0.25s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--font-stack);
+    color: var(--text-primary-pure);
+    background-color: var(--bg-dark-void);
+    line-height: 1.6;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   MINIMAL GLOW NAV-BAR
+   ========================================================================== */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(13, 17, 23, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.2rem 2rem;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--text-primary-pure);
+}
+
+.logo span {
+    color: var(--accent-glow-neon);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.8rem;
+}
+
+nav a {
+    color: var(--text-muted-gray);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color var(--transition-fast);
+}
+
+nav a:hover {
+    color: var(--accent-glow-neon);
+}
+
+/* ==========================================================================
+   GLOBAL LAYOUT STRUCTURE & HEADINGS
+   ========================================================================== */
+section {
+    padding: 8rem 2rem 5rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    min-height: 90vh;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--text-primary-pure);
+    margin-bottom: 3.5rem;
+    position: relative;
+}
+
+.section-title::before {
+    content: '// ';
+    color: var(--accent-glow-neon);
+}
+
+/* ==========================================================================
+   HERO / GREETINGS SECTIONS
+   ========================================================================== */
+#home {
+    display: flex;
+    align-items: center;
+    padding-top: 12rem;
+}
+
+.greetings {
+    color: var(--accent-glow-neon);
+    font-family: monospace;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(45deg, #ffffff, #8b949e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content h2 {
+    font-size: 1.6rem;
+    color: var(--text-muted-gray);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.hero-tagline {
+    max-width: 600px;
+    color: var(--text-muted-gray);
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+.academic-meta {
+    background-color: var(--bg-surface-card);
+    padding: 1.5rem;
+    border-radius: 12px;
+    display: block;
+    max-width: 550px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: left;
+}
+
+.meta-badge {
+    background: rgba(0, 255, 209, 0.1);
+    color: var(--accent-glow-neon);
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.meta-grid p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--text-primary-pure);
+}
+
+.meta-grid p strong {
+    color: var(--text-muted-gray);
+}
+
+/* ==========================================================================
+   ABOUT GRID WITH SUBTLE TIMELINE EFFECTS
+   ========================================================================== */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 4rem;
+}
+
+.about-text p {
+    font-size: 1.05rem;
+    color: var(--text-muted-gray);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.education-timeline h3, .skills-container h3 {
+    color: var(--text-primary-pure);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
+}
+
+.edu-item {
+    margin-bottom: 1.5rem;
+    padding-left: 1.2rem;
+    border-left: 2px solid var(--accent-glow-neon);
+}
+
+.edu-item h4 {
+    color: var(--text-primary-pure);
+    font-size: 1.05rem;
+}
+
+.edu-sub {
+    font-size: 0.9rem;
+    color: var(--text-muted-gray);
+}
+
+/* ==========================================================================
+   SKILLS MODERN LABELS
+   ========================================================================== */
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    list-style: none;
+}
+
+.skills-list li {
+    background-color: var(--bg-surface-card);
+    color: var(--text-primary-pure);
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    display: flex;
+    align-items: center;
+}
+
+.tech-icon {
+    margin-right: 10px;
+}
+
+/* ==========================================================================
+   PROJECT CARDS DYNAMIC BLOCKS
+   ========================================================================== */
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.8rem;
+}
+
+.work-card {
+    background-color: var(--bg-surface-card);
+    border-radius: 12px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.work-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 255, 209, 0.3);
+}
+
+.card-content {
+    padding: 2rem;
+}
+
+.card-header-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.card-tag {
+    background-color: rgba(255, 255, 255, 0.06);
+    color: var(--text-primary-pure);
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.tech-stack {
+    color: var(--accent-glow-neon);
+    font-family: monospace;
+    font-size: 0.8rem;
+}
+
+.card-title {
+    margin-bottom: 0.6rem;
+    color: var(--text-primary-pure);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.card-desc {
+    color: var(--text-muted-gray);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   ACHIEVEMENTS PANEL MODERNIZE
+   ========================================================================== */
+.achievements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.achievement-item {
+    background-color: var(--bg-surface-card);
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    border-left: 3px solid var(--accent-gold-soft);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.ach-badge {
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
+    font-size: 0.75rem;
+    color: var(--text-muted-gray);
+    background-color: rgba(255, 255, 255, 0.04);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+
+.achievement-item h3 {
+    color: var(--text-primary-pure);
+    font-size: 1.15rem;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+.achievement-item p {
+    color: var(--text-muted-gray);
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   CONTACT SECTION CONSOLE PANEL
+   ========================================================================== */
+.contact-container {
+    background-color: var(--bg-surface-card);
+    padding: 4rem 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 209, 0.02);
+    text-align: center;
+}
+
+.contact-container h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+}
+
+.contact-container p {
+    color: var(--text-muted-gray);
+    max-width: 500px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.contact-btn {
+    padding: 0.8rem 1.8rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all var(--transition-fast);
+}
+
+.btn-email {
+    background-color: var(--accent-glow-neon);
+    color: #000000;
+}
+
+.btn-email:hover {
+    box-shadow: 0 0 15px rgba(0, 255, 209, 0.4);
+}
+
+.btn-linkedin {
+    background-color: transparent;
+    color: var(--text-primary-pure);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-linkedin:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ==========================================================================
+   MINIMAL FOOTER STRIP
+   ========================================================================== */
+footer {
+    text-align: center;
+    padding: 2.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted-gray);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN ADAPTATION ENGINE
+   ========================================================================== */
+@media (max-width: 850px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .ach-badge {
+        position: relative;
+        right: auto;
+        top: auto;
