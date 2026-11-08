@@ -419,9 +419,11 @@ footer {
 /* MOBILE RESPONSIVE DESIGN */
 @media (max-width: 600px) {
 
-    /* Navigation Bar */
+    /* NAVIGATION BAR */
+
     .nav-container {
         flex-direction: column;
+        align-items: center;
         gap: 12px;
         padding: 12px 10px;
     }
@@ -441,13 +443,20 @@ footer {
         font-size: 1.2rem;
     }
 
-    /* General Sections */
+    /* GENERAL SECTIONS */
+
     section {
         padding: 7rem 1.2rem 3rem;
         min-height: auto;
     }
 
-    /* Home Section */
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    /* HOME SECTION */
+
     #home {
         padding-top: 12rem;
     }
@@ -457,28 +466,69 @@ footer {
     }
 
     .hero-content h2 {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
     }
 
     .hero-tagline {
+        font-size: 1.1rem;
+    }
+
+    /* ABOUT ME */
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .about-text p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+
+    /* ACADEMIC JOURNEY */
+
+    .education-timeline h3,
+    .skills-container h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .edu-item h4 {
+        font-size: 1.05rem;
+    }
+
+    .edu-sub {
+        font-size: 0.9rem;
+    }
+
+    /* SKILLS */
+
+    .skills-list li {
         font-size: 0.95rem;
     }
 
-    /* Projects */
+    /* PROJECTS */
+
     .work-grid {
         grid-template-columns: 1fr;
     }
 
     .card-content {
-        padding: 1.4rem;
+        padding: 2rem;
     }
 
-    /* Achievements */
+    /* ACHIEVEMENTS */
+
     .achievement-item {
-        padding: 1.3rem;
+        padding: 1.5rem 2rem;
     }
 
-    /* Contact */
+    .achievement-item h3 {
+        font-size: 1.15rem;
+    }
+
+    /* CONTACT */
+
     .contact-container {
         padding: 2rem 1rem;
     }
@@ -488,7 +538,4 @@ footer {
         gap: 1rem;
     }
 
-    .section-title {
-        font-size: 1.7rem;
-    }
 }
