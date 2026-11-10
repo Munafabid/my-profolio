@@ -1,0 +1,463 @@
+/* ===== Basic reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0d1117;   /* dark background */
+    color: #f0f6fc;              /* main text color */
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ===== Header and navigation ===== */
+header {
+    background-color: #0d1117;
+    border-bottom: 1px solid #222a33;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #f0f6fc;
+}
+
+.logo span {
+    color: #00ffd1;              /* neon green part of the logo */
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #8b949e;
+    font-size: 15px;
+    transition: color 0.25s;
+}
+
+/* Hover effect and current page link */
+.nav-links a:hover,
+.nav-links a.active {
+    color: #00ffd1;
+}
+
+/* ===== Main page area ===== */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    min-height: 75vh;
+}
+
+.page-title {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.page-intro {
+    color: #8b949e;
+    max-width: 750px;
+    margin-bottom: 40px;
+    font-size: 17px;
+}
+
+/* ===== Home page ===== */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;         /* picture stays at the top, next to the name */
+    gap: 40px;
+}
+
+/* Round profile picture */
+.profile-pic {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;               /* picture does not get stretched */
+    border-radius: 50%;              /* makes it fully round */
+    border: 4px solid #00ffd1;       /* neon green border */
+    flex-shrink: 0;
+    margin-top: 10px;
+    transition: box-shadow 0.25s;
+}
+
+.profile-pic:hover {
+    box-shadow: 0 0 20px #00ffd1;    /* glow on hover */
+}
+
+.hello {
+    color: #00ffd1;
+    font-family: monospace;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 24px;
+    color: #8b949e;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.hero-text {
+    max-width: 600px;
+    color: #8b949e;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.info-box {
+    background-color: #161b22;
+    border: 1px solid #222a33;
+    border-radius: 10px;
+    padding: 24px;
+    max-width: 550px;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #0b3a38;
+    color: #00ffd1;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.info-box p {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.info-box strong {
+    color: #8b949e;
+}
+
+.more-link {
+    margin-top: 30px;
+}
+
+.more-link a {
+    color: #00ffd1;
+    font-weight: bold;
+}
+
+.more-link a:hover {
+    text-decoration: underline;
+}
+
+/* ===== About page ===== */
+.about-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;   /* left text, right skills */
+    gap: 50px;
+}
+
+.about-left p {
+    color: #8b949e;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.about-left h3,
+.about-right h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #2a323c;
+}
+
+.education-item {
+    border-left: 3px solid #00ffd1;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.education-item h4 {
+    font-size: 17px;
+}
+
+.education-item p {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.skills li {
+    background-color: #161b22;
+    border: 1px solid #222a33;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.skills span {
+    margin-right: 10px;
+}
+
+.learn-box {
+    background-color: #161b22;
+    border: 1px solid #222a33;
+    border-radius: 10px;
+    padding: 24px;
+    margin-top: 25px;
+}
+
+.learn-box h3 {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.learn-box p {
+    color: #8b949e;
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+/* ===== Projects page ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background-color: #161b22;
+    border: 1px solid #222a33;
+    border-radius: 10px;
+    padding: 28px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+/* Card hover effect: moves up and border glows */
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #00ffd1;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tag {
+    background-color: #2a2f36;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.tech {
+    color: #00ffd1;
+    font-family: monospace;
+    font-size: 13px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #8b949e;
+    font-size: 15px;
+}
+
+/* ===== Achievements page ===== */
+.achievement {
+    background-color: #161b22;
+    border-left: 4px solid #f4b400;   /* gold line */
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 20px;
+}
+
+.achievement-label {
+    display: inline-block;
+    background-color: #21262d;
+    color: #8b949e;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.achievement h3 {
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.achievement p {
+    color: #8b949e;
+    font-size: 15px;
+}
+
+/* ===== Contact page ===== */
+.contact-box {
+    background-color: #161b22;
+    border: 1px solid #222a33;
+    border-radius: 14px;
+    padding: 50px 25px;
+    text-align: center;
+}
+
+.contact-box h3 {
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+.contact-box p {
+    color: #8b949e;
+    max-width: 550px;
+    margin: 0 auto 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: all 0.25s;
+}
+
+.btn-email {
+    background-color: #00ffd1;
+    color: #000000;
+}
+
+.btn-email:hover {
+    box-shadow: 0 0 15px #00ffd1;     /* glow effect */
+}
+
+.btn-linkedin {
+    border: 1px solid #3a424d;
+    color: #f0f6fc;
+}
+
+.btn-linkedin:hover {
+    background-color: #21262d;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 14px;
+    color: #8b949e;
+    border-top: 1px solid #222a33;
+}
+
+/* ===== Tablet screens ===== */
+@media (max-width: 850px) {
+    .hero {
+        flex-direction: column-reverse;   /* picture comes first */
+        align-items: flex-start;
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;    /* one column */
+        gap: 40px;
+    }
+}
+
+/* ===== Mobile screens ===== */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 18px;
+    }
+
+    main {
+        padding: 40px 15px;
+    }
+
+    .page-title {
+        font-size: 26px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .profile-pic {
+        width: 180px;
+        height: 180px;
+    }
+
+    .hero h2 {
+        font-size: 19px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .achievement {
+        padding: 20px;
+    }
+
+    .contact-box {
+        padding: 30px 15px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

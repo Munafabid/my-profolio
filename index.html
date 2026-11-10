@@ -5,49 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Muhammad Munaf Abid's software engineering student portfolio.">
     <title>Home | Muhammad Munaf Abid</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <div class="nav-container">
-        <a class="logo" href="index.html">&lt;MMA<span>.dev</span>/&gt;</a>
-        <nav aria-label="Main navigation">
-            <ul>
-                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-                <li><a href="about.html" >About</a></li>
-                <li><a href="projects.html" >Projects</a></li>
-                <li><a href="achievements.html" >Milestones</a></li>
-                <li><a href="contact.html" >Ping Me</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
 
-<main>
-    <section id="home">
-        <div class="hero-content">
-            <span class="greetings">// Assalam-o-Alaikum, I am</span>
+    <!-- Header with logo and menu -->
+    <header>
+        <div class="navbar">
+            <a class="logo" href="index.html">&lt;MMA<span>.dev</span>/&gt;</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="achievements.html">Milestones</a></li>
+                <li><a href="contact.html">Ping Me</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main content of the page -->
+    <main>
+        <section class="hero">
+
+            <!-- Left side: all the text -->
+            <div class="hero-info">
+            <p class="hello">// Assalam-o-Alaikum, I am</p>
             <h1>Muhammad Munaf Abid</h1>
             <h2>Software Engineering Student @ NED UET</h2>
-            <p class="hero-tagline">I'm learning how software works, one concept and one project at a time. I enjoy solving problems, improving my logic, and turning what I learn into something practical.</p>
+            <p class="hero-text">I'm learning how software works, one concept and one project at a time. I enjoy solving problems, improving my logic, and turning what I learn into something practical.</p>
 
-            <div class="academic-meta">
-                <div class="meta-badge">Department of Software Engineering</div>
-                <div class="meta-grid">
-                    <p><strong>Roll Number:</strong> SE-26095</p>
-                    <p><strong>Current Status:</strong> First Year</p>
-                    <p><strong>Course:</strong> EF-101 IT Fundamentals &amp; Applications</p>
-                </div>
+            <div class="info-box">
+                <div class="badge">Department of Software Engineering</div>
+                <p><strong>Roll Number:</strong> SE-26095</p>
+                <p><strong>Current Status:</strong> First Year</p>
+                <p><strong>Course:</strong> EF-101 IT Fundamentals &amp; Applications</p>
             </div>
-            <div class="page-actions">
+
+            <div class="more-link">
                 <a href="about.html">A little more about me →</a>
             </div>
-        </div>
-    </section>
-</main>
+            </div>
 
-<footer>
-    <p>© 2026 Muhammad Munaf Abid | Software Engineering, NED UET</p>
-</footer>
+            <!-- Right side: my picture (put your photo in the images folder and name it munaf.jpg) -->
+            <img class="profile-pic" src="C:\Users\HP\Downloads\portfolio\images\Light background pic.jpeg" alt="Photo of Muhammad Munaf Abid">
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Muhammad Munaf Abid | Software Engineering, NED UET</p>
+    </footer>
+
 </body>
 </html>
